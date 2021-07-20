@@ -1,0 +1,1 @@
+<button type="submit" class="btn btn-primary rounded-pill">{{__('Create')}}</button>

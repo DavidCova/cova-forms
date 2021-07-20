@@ -1,0 +1,1 @@
+<button type="submit" class="btn btn-success rounded-pill"><i class="fas fa-sync-alt me-2"></i>{{__('Update')}}</button>

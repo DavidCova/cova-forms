@@ -1,0 +1,1 @@
+<a href="{{$route}}" class="btn btn-link p-0"><i class="far fa-edit text-success"></i></a>

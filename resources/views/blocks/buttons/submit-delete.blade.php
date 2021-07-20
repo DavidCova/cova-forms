@@ -1,0 +1,1 @@
+<button type="submit" class="btn btn-danger rounded-pill"><i class="far fa-trash-alt me-2"></i>{{__('Delete')}}</button>
