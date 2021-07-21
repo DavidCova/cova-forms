@@ -1,5 +1,5 @@
 <form action="{{route('training.store')}}" method="post">
-@csrf
+## @csrf
 @include('blocks.forms.errors')
 @include('blocks.forms.input-text', ['identifier' => "name",'label' => "Name",'required' => 'required'])
 @include('blocks.forms.input-text', ['identifier' => "speaker",'label' => "Speaker",'required' => 'required'])
