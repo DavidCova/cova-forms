@@ -1,5 +1,9 @@
+# Cova Forms
+This is a guide to help you interact with the include blade directive from laravel to pass variables to form inputs to minimize time required and faulty forms.
+###### Example
+```
 <form action="{{route('training.store')}}" method="post">
-## @csrf
+@csrf
 @include('blocks.forms.errors')
 @include('blocks.forms.input-text', ['identifier' => "name",'label' => "Name",'required' => 'required'])
 @include('blocks.forms.input-text', ['identifier' => "speaker",'label' => "Speaker",'required' => 'required'])
@@ -18,7 +22,8 @@
 <div class="py-2">
 @include('blocks.buttons.submit-create')
 </div>
-
+```
+```
 @include('blocks.forms.input-text', ['identifier' => "position",'label' => "Job position",'required' => 'required'])
 @include('blocks.forms.input-select', ['identifier' => "company",'required' => 'required','options' => $companies,'key' => 'id','val' => "name"])
 @include('blocks.forms.input-select', ['identifier' => "type",'required' => 'required','options' => ['Full-time','Permanent Contract','Temporary','Part-time','Volunteer','Internship']])
@@ -27,10 +32,12 @@
 @include('blocks.forms.input-select', ['identifier' => "status",'required' => 'required','options' => json_encode([['id' => 1,'name' => 'Active'],['id' => 0,'name' => 'Inactive']]),'key' => 'id','val' => "name"])                                 
 @include('blocks.forms.input-text', ['identifier' => "location",'required' => 'required'])
 </form>
-
+```
+```
 @include('blocks.buttons.submit-create')
 @include('blocks.buttons.submit-send')
 @include('blocks.buttons.submit-delete')
 @include('blocks.buttons.submit-edit')
 @include('blocks.buttons.submit-update')
 @include('blocks.buttons.submit')
+```
