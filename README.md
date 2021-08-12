@@ -1,7 +1,7 @@
 # Cova Forms
 This is a guide to help you interact with the include blade directive from laravel to pass variables to form inputs to minimize time required and faulty forms.
 ###### Example
-```
+```blade
 <form action="{{route('training.store')}}" method="post">
 @csrf
 @include('blocks.forms.errors')
@@ -24,7 +24,7 @@ This is a guide to help you interact with the include blade directive from larav
 @include('blocks.buttons.submit-create')
 </div>
 ```
-```
+```blade
 @include('blocks.forms.input-text', ['identifier' => "position",'label' => "Job position",'required' => 'required'])
 @include('blocks.forms.input-select', ['identifier' => "company",'required' => 'required','options' => $companies,'key' => 'id','val' => "name"])
 @include('blocks.forms.input-select', ['identifier' => "type",'required' => 'required','options' => ['Full-time','Permanent Contract','Temporary','Part-time','Volunteer','Internship']])
@@ -34,7 +34,7 @@ This is a guide to help you interact with the include blade directive from larav
 @include('blocks.forms.input-text', ['identifier' => "location",'required' => 'required'])
 </form>
 ```
-```
+```blade
 @include('blocks.buttons.submit-create')
 @include('blocks.buttons.submit-send')
 @include('blocks.buttons.submit-delete')
