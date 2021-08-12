@@ -6,7 +6,7 @@
         $val = "";
     }
     @endphp 
-    <label class="pt-2" for="{{$identifier}}"><div class="text-capitalize">{{$label ?? $identifier}}@if (isset($required)) @if ($required == 1)
+    <label class="pt-2" for="{{$identifier}}"><div class="text-capitalize">{{$label ?? str_replace("_"," ",$identifier)}}@if (isset($required)) @if ($required == 1)
         <span class="text-p mx-2">*</span>
     @endif  @endif</div></label>
     <input type="date" name="{{$identifier}}" id="{{$identifier}}" 
