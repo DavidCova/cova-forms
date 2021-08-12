@@ -7,7 +7,7 @@
     }
     @endphp
     <label class="pt-2" for="{{$identifier}}">
-        <div class="text-capitalize">{{$label ?? $identifier}}
+        <div class="text-capitalize">{{$label ?? str_replace("_"," ",$identifier)}}
             @if (isset($required))
             @if ($required == 1)
             <span class="text-p mx-2">*</span>
