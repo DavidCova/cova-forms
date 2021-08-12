@@ -1,6 +1,6 @@
 <div class="form-group">
     <label class="pt-2" for="{{$identifier}}">
-        <div class="text-capitalize">{{__($label ?? $identifier)}}
+        <div class="text-capitalize">{{__($label ?? str_replace("_"," ",$identifier))}}
             @if (isset($required))
             <span class='text-p mx-2'>*</span>
             @endif    
