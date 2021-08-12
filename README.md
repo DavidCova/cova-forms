@@ -19,6 +19,7 @@ This is a guide to help you interact with the include blade directive from larav
 @include('blocks.forms.input-textarea', ['identifier' => "body",'label' => 'Description','required' => 'required','cols' => 60,'rows'=>1])
 @include('blocks.forms.input-hidden',['identifier' => 'employee_id','val' => $employee->id,'required' => 'required'])
 @include('blocks.forms.input-select', ['identifier' => "status",'required' => 'required','options' => json_encode([['id' => 1,'name' => 'Active'],['id' => 0,'name' => 'Inactive']]),'key' => 'id','val' => "name"]) 
+@include('blocks.forms.input-file', ['identifier' => 'file_path[]','label' => 'Documents','multiple' => 'multiple','filetypes' => ['application/pdf','.doc','.docx']])
 <div class="py-2">
 @include('blocks.buttons.submit-create')
 </div>
