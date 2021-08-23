@@ -52,6 +52,7 @@ This is a guide to help you interact with the include blade directive from larav
 - required
 
 **Multiple**
+
 When multiple is used, make sure to call the identifier as an array as such:
 ```blade
 'identifier' => 'file_path[]','multiple' => 'multiple'
@@ -59,6 +60,7 @@ When multiple is used, make sure to call the identifier as an array as such:
 Also make sure the form as the correct enctype="multipart/form-data"
 
 **Filetypes**
+
 Filetypes can be defined as such:
 ```blade
 'filetypes' => ['application/pdf','.doc','.docx']
