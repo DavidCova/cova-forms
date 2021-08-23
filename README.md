@@ -51,7 +51,13 @@ This is a guide to help you interact with the include blade directive from larav
 - multiple
 - required
 
-Filetypes can be defined as such
+When multiple is used, make sure to call the identifier as an array as such:
+```blade
+'identifier' => 'file_path[]','multiple' => 'multiple'
+```
+Also make sure the form as the correct enctype="multipart/form-data"
+
+Filetypes can be defined as such:
 ```blade
 'filetypes' => ['application/pdf','.doc','.docx']
 'filetypes' => ['image/jpeg,image/gif,image/png,application/pdf']
