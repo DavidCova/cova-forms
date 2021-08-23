@@ -20,7 +20,7 @@
         @if ($required==1) required
         @endif
     @endif
-        class="form-control @error($identifier) is-invalid @enderror" cols="{{$cols}}" rows="{{$rows}}" style="{{$style ?? ''}}">{{old($identifier,$val)}}</textarea>
+        class="form-control {{$classes ?? ''}} @error($identifier) is-invalid @enderror" cols="{{$cols}}" rows="{{$rows}}" style="{{$style ?? ''}}">{{old($identifier,$val)}}</textarea>
     @error($identifier)
     <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
     @enderror
