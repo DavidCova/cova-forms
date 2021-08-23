@@ -42,3 +42,18 @@ This is a guide to help you interact with the include blade directive from larav
 @include('blocks.buttons.submit-update')
 @include('blocks.buttons.submit')
 ```
+
+### File input
+**Attributes**
+- identifier
+- label
+- filetypes
+- multiple
+- required
+
+Filetypes can be defined as such
+```blade
+'filetypes' => ['application/pdf','.doc','.docx']
+'filetypes' => ['image/jpeg,image/gif,image/png,application/pdf']
+'filetypes' => ['jpg,png,jpeg,PNG,JPEG,JPG,GIF,gif']
+```
