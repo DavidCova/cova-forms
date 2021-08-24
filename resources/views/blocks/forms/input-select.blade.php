@@ -24,6 +24,9 @@
                     @if($option->$key == $current)
                     selected
                     @endif
+
+                @elseif ($option == $current)
+                selected
                 @endif
             @endif            
             >
