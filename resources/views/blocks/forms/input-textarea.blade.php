@@ -13,7 +13,14 @@
     </label>
     <textarea name="{{$identifier}}" id="{{$identifier}}"
     {{isset($required) ? ($required == true) ? 'required' :'' : ''}}
-        class="form-control {{$input_classes ?? ''}} @error($identifier) is-invalid @enderror" cols="{{$cols}}" rows="{{$rows}}" style="{{$style ?? ''}}">{{old($identifier,$val)}}</textarea>
+        class="form-control {{$input_classes ?? ''}} @error($identifier) is-invalid @enderror" cols="{{$cols ?? ''}}" rows="{{$rows ?? ''}}" style="{{$style ?? ''}}"
+        {{$readonly ?? ''}}
+        {{$disabled ?? ''}}
+        {{$placeholder ?? ''}}
+        {{$spellcheck ?? ''}}
+        {{$maxlength ?? ''}}
+        {{$minlength ?? ''}}
+        >{{old($identifier,$val)}}</textarea>
     @error($identifier)
     <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
     @enderror

@@ -12,7 +12,13 @@
     </label>
     <input type="text" name="{{$identifier}}" id="{{$identifier}}" class="form-control {{$input_classes ?? ''}} rounded-0 @error($identifier) is-invalid @enderror"
         value="{{old($identifier, $val)}}"
-        {{$required ?? ''}}>
+        {{$required ?? ''}}
+        {{$readonly ?? ''}}
+        {{$placeholder ?? ''}}
+        {{$pattern ?? ''}}
+        {{$maxLength ?? ''}}
+        {{$minLength ?? ''}}
+        >
     @error($identifier)
     <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
     @enderror

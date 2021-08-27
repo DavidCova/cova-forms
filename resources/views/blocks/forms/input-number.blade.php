@@ -16,6 +16,8 @@
     {{$required ?? ''}}
     {{$readonly ?? ''}}
     {{$js ?? ''}}
+    @if (isset($max)) max="{{$max}}" @endif
+    @if (isset($min)) min="{{$min}}" @endif
     @if (isset($step)) step="{{$step}}" @endif>
     @error($identifier)
     <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>

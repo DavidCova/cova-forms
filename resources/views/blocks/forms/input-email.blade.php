@@ -14,6 +14,7 @@
     <input type="email" name="{{$identifier}}" id="{{$identifier}}" class="form-control {{$input_classes ?? ''}} rounded-0 @error($identifier) is-invalid @enderror"
         value="{{old($identifier, $val)}}"
         {{$required ?? ''}}
+        {{$multiple ?? ''}}
         placeholder="{{$placeholder ?? ''}}"
         >
     @error($identifier)
