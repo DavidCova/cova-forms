@@ -5,9 +5,7 @@
     @if ($label != false)
     <label class="pt-2" for="{{$identifier}}">
         <div class="text-capitalize {{$label_classes ?? ''}}">{{(($label != false) ? $label : '') ?? str_replace("_"," ",$identifier)}}
-            @if (isset($required))
-            <span class="text-p mx-2">*</span>
-            @endif
+            @if (isset($required))<span class="text-p mx-2">*</span>@endif
         </div>
     </label>
     @endif

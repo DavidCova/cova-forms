@@ -1,9 +1,7 @@
 <div class="form-group py-2">
-    <label for="{{$identifier}}" class="form-label">
-        <div class="text-capitalize">{{$label ?? $identifier}}
-            @if (isset($required))
-            <span class='text-p mx-2'>*</span>
-            @endif    
+    <label class="pt-2" for="{{$identifier}}">
+        <div class="text-capitalize">{{$label ?? str_replace("_"," ",$identifier)}}
+            @if (isset($required))<span class="text-p mx-2">*</span>@endif
         </div>
     </label>
     <input class="form-control {{$input_classes ?? ''}} @error($identifier) is-invalid @enderror" type="file" id="{{$identifier}}" name="{{$identifier}}" 

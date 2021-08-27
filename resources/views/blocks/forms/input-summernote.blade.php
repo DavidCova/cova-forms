@@ -4,9 +4,7 @@
 @endphp
     <label class="pt-2" for="{{$identifier}}">
         <div class="text-capitalize">{{$label ?? str_replace("_"," ",$identifier)}}
-            @if (isset($required))
-            <span class='text-p mx-2'>*</span>
-            @endif
+            @if (isset($required))<span class='text-p mx-2'>*</span>@endif
         </div>
     </label>
     <textarea name="{{$identifier}}" id="{{$identifier}}"
