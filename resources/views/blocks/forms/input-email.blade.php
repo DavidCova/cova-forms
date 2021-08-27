@@ -1,11 +1,7 @@
 <div class="form-group">
-    @php
-    if(isset($value)){
-    $val = $value;
-    }else{
-    $val = "";
-    }
-    @endphp
+@php
+    (isset($value)) ? $val = $value : $val = "";
+@endphp
     @if ($label != false)
     <label class="pt-2" for="{{$identifier}}">
         <div class="text-capitalize {{$label_classes ?? ''}}">{{(($label != false) ? $label : '') ?? str_replace("_"," ",$identifier)}}
