@@ -14,12 +14,14 @@
     <textarea name="{{$identifier}}" id="{{$identifier}}"
     {{isset($required) ? ($required == true) ? 'required' :'' : ''}}
         class="form-control {{$input_classes ?? ''}} @error($identifier) is-invalid @enderror" cols="{{$cols ?? ''}}" rows="{{$rows ?? ''}}" style="{{$style ?? ''}}"
-        {{$readonly ?? ''}}
-        {{$disabled ?? ''}}
-        {{$placeholder ?? ''}}
-        {{$spellcheck ?? ''}}
-        {{$maxlength ?? ''}}
-        {{$minlength ?? ''}}
+        @if (isset($spellcheck)) spellcheck="true" @endif
+        @if (isset($required)) required @endif
+        @if (isset($readonly)) readonly @endif
+        @if (isset($disabled)) disabled @endif
+        @if (isset($placeholder)) placeholder="{{$placeholder}}" @endif
+        @if (isset($pattern)) pattern="{{$pattern}}" @endif
+        @if (isset($maxlength)) maxlength="{{$maxlength}}" @endif
+        @if (isset($minlength)) minlength="{{$minlength}}" @endif
         >{{old($identifier,$val)}}</textarea>
     @error($identifier)
     <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>

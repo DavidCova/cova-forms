@@ -14,8 +14,9 @@
     @endforeach
     "
     @endif
-    {{$multiple ?? ''}}
-    {{$required ?? ''}}>
+    @if (isset($multiple)) multiple @endif
+    @if (isset($required)) required @endif
+    >
     @error($identifier)
     <div class="invalid-feedback">
         <strong>{{ $message }}</strong>
