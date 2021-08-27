@@ -7,7 +7,7 @@
         </div>
     </label>
     <select name="{{$identifier}}[]" id="{{$identifier}}" multiple {{$required ?? ''}}
-        class="form-select rounded-0 @error($identifier) is-invalid @enderror">
+        class="form-select {{$input_classes ?? ''}} rounded-0 @error($identifier) is-invalid @enderror">
         <option value="" selected disabled>{{__('Select')}}</option>
         @foreach ($options as $option)
         <option value="{{$option->$key}}" @if(isset($current) &&in_array($option->$key, $current)) selected @endif >{{$option->$val}}</option>

@@ -6,7 +6,7 @@
             @endif
         </div>
     </label>
-    <input type="password" name="{{$identifier}}" id="{{$identifier}}" class="form-control rounded-0 {{$classes ?? ''}} @error($identifier) is-invalid @enderror" {{$required ?? ''}} autocomplete="{{$autocomplete ?? ''}}">
+    <input type="password" name="{{$identifier}}" id="{{$identifier}}" class="form-control {{$input_classes ?? ''}} rounded-0 @error($identifier) is-invalid @enderror" {{$required ?? ''}} autocomplete="{{$autocomplete ?? ''}}">
     @error($identifier)
     <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
     @enderror

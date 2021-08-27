@@ -6,7 +6,7 @@
             @endif    
         </div>
     </label>
-    <input class="form-control" type="file" id="{{$identifier}}" name="{{$identifier}}" 
+    <input class="form-control {{$input_classes ?? ''}} @error($identifier) is-invalid @enderror" type="file" id="{{$identifier}}" name="{{$identifier}}" 
     @if (isset($filetypes))
     accept="
     @foreach ($filetypes as $ft)

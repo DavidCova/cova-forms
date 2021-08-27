@@ -11,7 +11,7 @@
     </label>
     <textarea name="{{$identifier}}" id="{{$identifier}}"
     {{$required ?? ''}}
-        class="form-control @error($identifier) is-invalid @enderror">{!!old($identifier,$val)!!}</textarea>
+        class="form-control {{$input_classes ?? ''}} @error($identifier) is-invalid @enderror">{!!old($identifier,$val)!!}</textarea>
     @error($identifier)
     <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
     @enderror

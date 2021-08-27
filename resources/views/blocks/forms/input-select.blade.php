@@ -7,7 +7,7 @@
         </div>
     </label>
     <select name="{{$identifier}}" id="{{$identifier}}" {{$readonly ?? ''}}
-        class="form-select rounded-0 @error($identifier) is-invalid @enderror"
+        class="form-select {{$input_classes ?? ''}} rounded-0 @error($identifier) is-invalid @enderror"
         @if(isset($model))
             wire:model="{{$model}}"
         @endif

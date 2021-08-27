@@ -10,7 +10,7 @@
         <span class="text-p mx-2">*</span>
     @endif  @endif</div></label>
     <input type="date" name="{{$identifier}}" id="{{$identifier}}" 
-     class="form-control rounded-0 @error($identifier) is-invalid @enderror"
+     class="form-control {{$input_classes ?? ''}} rounded-0 @error($identifier) is-invalid @enderror"
      value="{{old($identifier,$val)}}"
      {{$required ?? ''}}
      min="{{$min ?? ''}}"

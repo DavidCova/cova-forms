@@ -1,5 +1,5 @@
 <div class="form-check form-switch">
-    <input class="form-check-input" type="checkbox" id="{{$identifier}}" name="{{$identifier}}" {{$checked ?? ''}} {{$required ?? ''}}
+    <input class="form-check-input {{$input_classes ?? ''}} @error($identifier) is-invalid @enderror" type="checkbox" id="{{$identifier}}" name="{{$identifier}}" {{$checked ?? ''}} {{$required ?? ''}}
      @if(isset($value))
      @if ($value == 1)
          checked
