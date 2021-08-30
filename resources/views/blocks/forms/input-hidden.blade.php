@@ -1,1 +1,1 @@
-<input type="hidden" name="{{$identifier}}" value="{{$val}}" {{$required ?? ''}}>
+<input type="hidden" name="{{$identifier}}" value="{{$current}}" {{$required ?? ''}}>
