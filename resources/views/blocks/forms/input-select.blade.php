@@ -15,11 +15,11 @@
         {{$required ?? ''}}>
         <option value="">{{__('Select')}}</option>
        @if ((is_object($options) || is_array($options)))
-        @foreach ($options as $option)
-        <option value="@if(isset($key)){{$option->$key}}@else{{$option}}@endif"
+        @foreach ($options as $o)
+        <option value="@if(isset($key)){{$o->$key}}@else{{$o}}@endif"
             @if(isset($current))
                 @if (isset($key))
-                    @if($option->$key == $current)
+                    @if($o->$key == $current)
                     selected
                     @endif
 
@@ -28,7 +28,7 @@
                 @endif
             @endif            
             >
-            @if(isset($val)){{$option->$val}}@else{{$option}}@endif
+            @if(isset($option)){{$o->$option}}@else{{$option}}@endif
         </option>
         @endforeach
         @else
