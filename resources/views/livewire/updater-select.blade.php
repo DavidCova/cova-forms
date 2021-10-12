@@ -23,14 +23,16 @@
             <option value="">{{__('Select')}}</option>
         @if ((is_object($options) || is_array($options)))
             @foreach ($options as $option)
-                <option value="{{$option}}">{{$option}}</option>
+                <option @if ($current == $option) selected @endif value="{{$option}}">{{$option}}</option>
             {{-- <option value="@if(isset($key)){{$option->$key}}@else{{$option}}@endif">
                 @if(isset($val)){{$option->$val}}@else{{$option}}@endif
             </option> --}}
             @endforeach
         @else
             @foreach (json_decode($options,true) as $data)
-                <option value="{{$data['id']}}">{{$data['name']}}</option>
+                <option @if ($current == $data['name']) selected
+                    
+                @endif value="{{$data['id']}}">{{$data['name']}}</option>
             @endforeach
         @endif
         </select>

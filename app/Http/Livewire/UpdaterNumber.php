@@ -4,14 +4,14 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
-class Updater extends Component
+class UpdaterNumber extends Component
 {
-    
     public $new_value;
     public $col;
     public $model;
     public $current;
     public $rules;
+    public $step;
 
     public function mount()
     {
@@ -30,6 +30,6 @@ class Updater extends Component
 
     public function render()
     {
-        return view('livewire.updater');
+        return view('livewire.updater-number');
     }
 }
