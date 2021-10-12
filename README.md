@@ -67,3 +67,46 @@ Filetypes can be defined as such:
 'filetypes' => ['image/jpeg,image/gif,image/png,application/pdf']
 'filetypes' => ['jpg,png,jpeg,PNG,JPEG,JPG,GIF,gif']
 ```
+
+## Livewire live update inputs
+
+**Usage example**
+
+Input File
+
+```blade
+<div class="mt-2">Finance File</div>
+@livewire('updater-file', [
+'col' => 'finance_file',
+'model' => $investor,
+'rules' => ['file','max:1024'],
+'save_path' => 'people/'.$person->id.'-'.str_replace(' ', '-', strtolower($person->name)).'/investor/'.$investor->id.''
+]) 
+```
+Input Number
+```blade
+@livewire('updater-number', [
+'col' => 'investment_performance',
+'current' => $investor->investment_performance,
+'model' => $investor,
+'step' => 0.01
+])
+```
+Input Text
+```blade
+@livewire('updater-text', [
+'col' => 'motivation',
+'current' => $investor->motivation,
+'model' => $investor
+])
+```
+Select
+```blade
+ @livewire('updater-select', [
+'col' => 'ownership',
+'current' => $investor->ownership,
+'model' => $investor,
+'label' => false,
+'options' => ['Full','Partnership']
+])
+```
