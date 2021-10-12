@@ -80,7 +80,8 @@ Input File
 'col' => 'finance_file',
 'model' => $investor,
 'rules' => ['file','max:1024'],
-'save_path' => 'people/'.$person->id.'-'.str_replace(' ', '-', strtolower($person->name)).'/investor/'.$investor->id.'']) 
+'save_path' => 'people/'.$person->id.'-'.str_replace(' ', '-', strtolower($person->name)).'/investor/'.$investor->id.''
+]) 
 ```
 Input Number
 ```blade
@@ -88,12 +89,24 @@ Input Number
 'col' => 'investment_performance',
 'current' => $investor->investment_performance,
 'model' => $investor,
-'step' => 0.01])
+'step' => 0.01
+])
 ```
 Input Text
 ```blade
 @livewire('updater-text', [
 'col' => 'motivation',
 'current' => $investor->motivation,
-'model' => $investor])
+'model' => $investor
+])
+```
+Select
+```blade
+ @livewire('updater-select', [
+'col' => 'ownership',
+'current' => $investor->ownership,
+'model' => $investor,
+'label' => false,
+'options' => ['Full','Partnership']
+])
 ```
