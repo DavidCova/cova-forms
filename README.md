@@ -76,11 +76,24 @@ Input File
 
 ```blade
 <div class="mt-2">Finance File</div>
-                    @livewire('updater-file', ['col' => 'finance_file','model' => $investor,'rules' => ['file','max:1024'],'save_path' => 'people/'.$person->id.'-'.str_replace(' ', '-', strtolower($person->name)).'/investor/'.$investor->id.'']) 
+@livewire('updater-file', [
+'col' => 'finance_file',
+'model' => $investor,
+'rules' => ['file','max:1024'],
+'save_path' => 'people/'.$person->id.'-'.str_replace(' ', '-', strtolower($person->name)).'/investor/'.$investor->id.'']) 
 ```
 Input Number
 ```blade
-@livewire('updater-number', ['col' => 'investment_performance','current' => $investor->investment_performance, 'model' => $investor,'step' => 0.01])
+@livewire('updater-number', [
+'col' => 'investment_performance',
+'current' => $investor->investment_performance,
+'model' => $investor,
+'step' => 0.01])
 ```
 Input Text
-@livewire('updater-text', ['col' => 'motivation','current' => $investor->motivation, 'model' => $investor])
+```blade
+@livewire('updater-text', [
+'col' => 'motivation',
+'current' => $investor->motivation,
+'model' => $investor])
+```
