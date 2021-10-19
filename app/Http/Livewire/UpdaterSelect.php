@@ -17,6 +17,7 @@ class UpdaterSelect extends Component
     public function mount()
     {
         $this->new_value = $this->current;
+        $this->changedValue = $this->current;
         $rules = $this->rules;
     }
     public function testChange(){
