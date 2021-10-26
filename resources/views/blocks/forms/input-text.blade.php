@@ -26,6 +26,7 @@
         @if (isset($pattern)) pattern="{{$pattern}}" @endif
         @if (isset($maxlength)) maxlength="{{$maxlength}}" @endif
         @if (isset($minlength)) minlength="{{$minlength}}" @endif
+        @if (isset($title)) title="{{$title}}" @endif
         >
     </div>
     @error($identifier)
