@@ -1,6 +1,6 @@
 <div class="form-group">
 @php
-    (isset($value)) ? $val = $value : $val = "";
+    (isset($current)) ? $val = $current : $val = "";
 @endphp
     <label class="pt-2" for="{{$identifier}}">
         <div class="text-capitalize">{{$label ?? str_replace("_"," ",$identifier)}}
