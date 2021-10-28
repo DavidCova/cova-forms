@@ -1,5 +1,5 @@
 @php
-        (isset($value)) ? $val = $value : $val = "";
+        (isset($current)) ? $val = $current : $val = "";
     @endphp
 <div class="form-group">
     <label class="pt-2" for="{{$identifier}}">
