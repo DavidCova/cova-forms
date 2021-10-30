@@ -1,0 +1,14 @@
+{
+    "name": "david-cova/cova-forms",
+    "type": "library",
+    "description": "Customizable inputs, forms, buttons etc.",
+    "keywords": ["livewire","forms","inputs"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Cova",
+            "email": "davidcova88@gmail.com",
+            "role": "Developer"
+        }
+    ]
+}
