@@ -10,5 +10,12 @@
             "email": "davidcova88@gmail.com",
             "role": "Developer"
         }
-    ]
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DavidCova\\CovaForms\\FormServiceProvider"
+            ]
+        }
+    }
 }
