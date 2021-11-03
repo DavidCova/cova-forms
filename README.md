@@ -1,5 +1,15 @@
 # Cova Forms
 This is a guide to help you interact with the include blade directive from laravel to pass variables to form inputs to minimize time required and faulty forms.
+### Publishing assets
+
+Views
+```
+php artisan vendor:publish --tag=table-cova-forms
+```
+Livewire components
+```
+php artisan vendor:publish --tag=cova-livewire
+```
 ###### Example
 ```blade
 <form action="{{route('training.store')}}" method="post">
