@@ -13,7 +13,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "DavidCova\\CovaForms\\": "src"
+            "DavidCova\\CovaForms\\": "src/"
         }
     },
     "extra": {
