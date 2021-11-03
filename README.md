@@ -4,7 +4,7 @@ This is a guide to help you interact with the include blade directive from larav
 
 Views
 ```
-php artisan vendor:publish --tag=table-cova-forms
+php artisan vendor:publish --tag=cova-forms
 ```
 Livewire components
 ```
