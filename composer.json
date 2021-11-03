@@ -19,7 +19,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "DavidCova\\CovaForms\\FormServiceProvider"
+                "DavidCova\\CovaForms\\src\\Providers\\FormServiceProvider"
             ]
         }
     }
