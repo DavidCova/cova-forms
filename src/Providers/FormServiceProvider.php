@@ -12,4 +12,9 @@ class FormServiceProvider extends ServiceProvider
         $this->publishes([__DIR__ . '/../../app/Http/Livewire' => app_path('views/vendor/cova-forms')], 'cova-livewire');
         $this->publishes([__DIR__ . '/../../resources/views' => resource_path('views/vendor/cova-forms')], 'cova-forms');
     }
+
+    public function register()
+    {
+        $this->mergeConfigFrom(__DIR__ . '/../../config/cova-forms.php', 'cova-forms');
+    }
 }
