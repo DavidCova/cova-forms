@@ -11,6 +11,11 @@
             "role": "Developer"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "DavidCova\\CovaForms\\": "src"
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [
