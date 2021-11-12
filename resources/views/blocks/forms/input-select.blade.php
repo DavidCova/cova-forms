@@ -42,7 +42,13 @@
             @endforeach
         @else
             @foreach (json_decode($options,true) as $data)
-                <option value="{{$data['id']}}">{{$data['name']}}</option>
+                <option value="{{$data['id']}}"
+                @if (isset($current))
+                    @if ($data['id'] == $current)
+                        selected
+                    @endif
+                @endif                
+                >{{$data['name']}}</option>
             @endforeach
         @endif       
     </select>
