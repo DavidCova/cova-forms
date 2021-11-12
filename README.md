@@ -78,6 +78,7 @@ Filetypes can be defined as such:
 'filetypes' => ['jpg,png,jpeg,PNG,JPEG,JPG,GIF,gif']
 ```
 ### Select input example
+Using json_encode
 
 ```blade
  @include('blocks.forms.input-select',[
