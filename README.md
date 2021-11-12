@@ -77,7 +77,27 @@ Filetypes can be defined as such:
 'filetypes' => ['image/jpeg,image/gif,image/png,application/pdf']
 'filetypes' => ['jpg,png,jpeg,PNG,JPEG,JPG,GIF,gif']
 ```
+### Select input example
 
+```blade
+ @include('blocks.forms.input-select',[
+ 'identifier' => 'fruits_types',
+ 'label' => 'Fruits',
+ 'options' => json_encode(
+     [
+         ['id' => 0,'name' => 'Apple'],
+         ['id' => 1,'name' => 'Banana'],
+         ['id' => 2,'name' => 'Cherry'],
+         ['id' => 3,'name' => 'Dragon Fruit'],
+         ['id' => 4,'name' => 'Elder Berry'],
+         ['id' => 5,'name' => 'Fig'],
+     ]
+ ),
+ 'key' => 'id',
+ 'value' => 'name',
+ 'current' => $basket->favorite_fruit
+ ])
+```
 ## Livewire live update inputs
 
 **Usage example**
